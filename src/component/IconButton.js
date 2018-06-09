@@ -17,7 +17,7 @@ class IconButton extends Component {
         name={this.props.iconName}
         size={this.props.iconSize}
         iconStyle={{ color: 'black' }}
-        backgroundColor='red'
+        backgroundColor='white'
         onPress={this.onButtonPress.bind(this)}
       />
     );

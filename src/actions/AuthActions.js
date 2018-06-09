@@ -37,11 +37,3 @@ const loginUserFailed = (dispatch) => {
     type: LOGIN_USER_FAILED
   });
 };
-
-const navigateAction = NavigationActions.navigate({
-  routeName: 'Profile',
-
-  params: {},
-
-  action: NavigationActions.navigate({ routeName: 'SubProfileRoute' }),
-});

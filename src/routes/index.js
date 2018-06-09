@@ -4,6 +4,7 @@ import { createStackNavigator } from 'react-navigation';
 import EmployeeList from '../component/EmployeeList';
 import LoginForm from '../component/LoginForm';
 import IconButton from '../component/IconButton';
+import EmployeeCreate from '../component/EmployeeCreate';
 
 export const MainNavigation = createStackNavigator(
   {
@@ -18,14 +19,20 @@ export const MainNavigation = createStackNavigator(
       navigationOptions: {
         title: 'Employee List',
         headerRight: (
-          <IconButton iconName="plus" iconSize={30} routeName="login" />
+          <IconButton iconName="plus" iconSize={30} routeName="EmployeeForm" />
         )
         // headerTitleStyle: {}
       }
-     }
+    },
+    EmployeeForm: {
+      screen: EmployeeCreate,
+       navigationOption: {
+         title: 'Employee Form',
+       }
+    }
   },
     {
-        initialRouteName: 'EmployeeList',
+        initialRouteName: 'login',
         headerMode: 'screen',
         mode: 'card',
     }
