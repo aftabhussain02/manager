@@ -4,7 +4,6 @@ import { Provider, connect } from 'react-redux';
 import ReduxThunk from 'redux-thunk';
 import logger from 'redux-logger';
 import firebase from 'firebase';
-import { addNavigationHelpers } from 'react-navigation';
 import {
   createNavigationPropConstructor,       // handles #1 above
   createReactNavigationReduxMiddleware,  // handles #4 above

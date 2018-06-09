@@ -1,7 +1,9 @@
 import React from 'react';
+import Icon from 'react-native-vector-icons/FontAwesome';
 import { createStackNavigator } from 'react-navigation';
-import LoginForm from '../component/LoginForm';
 import EmployeeList from '../component/EmployeeList';
+import LoginForm from '../component/LoginForm';
+import IconButton from '../component/IconButton';
 
 export const MainNavigation = createStackNavigator(
   {
@@ -15,12 +17,15 @@ export const MainNavigation = createStackNavigator(
       screen: EmployeeList,
       navigationOptions: {
         title: 'Employee List',
+        headerRight: (
+          <IconButton iconName="plus" iconSize={30} routeName="login" />
+        )
         // headerTitleStyle: {}
       }
      }
   },
     {
-        initialRouteName: 'login',
+        initialRouteName: 'EmployeeList',
         headerMode: 'screen',
         mode: 'card',
     }
