@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
-import { View } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { connect } from 'react-redux';
-import { NavigateTo } from '../actions';
+import { NavigateTo, employeeReset } from '../actions';
 
 class IconButton extends Component {
   onButtonPress() {
     const { routeName } = this.props;
+    
+    this.props.employeeReset();
     this.props.NavigateTo({ name: routeName });
   }
 
@@ -25,4 +26,4 @@ class IconButton extends Component {
 }
 
 
-export default connect(null, { NavigateTo })(IconButton);
+export default connect(null, { NavigateTo, employeeReset })(IconButton);

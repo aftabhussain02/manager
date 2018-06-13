@@ -1,5 +1,4 @@
 import React from 'react';
-import Icon from 'react-native-vector-icons/FontAwesome';
 import { createStackNavigator } from 'react-navigation';
 import EmployeeList from '../component/EmployeeList';
 import LoginForm from '../component/LoginForm';
@@ -26,7 +25,7 @@ export const MainNavigation = createStackNavigator(
     },
     EmployeeForm: {
       screen: EmployeeCreate,
-       navigationOption: {
+       navigationOptions: {
          title: 'Employee Form',
        }
     }

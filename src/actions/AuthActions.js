@@ -2,18 +2,15 @@ import { NavigationActions } from 'react-navigation';
 import firebase from 'firebase';
 import {
   LOGIN_UPDATE,
-  LOGIN_USER_SUCCESS,
-  LOGIN_USER_FAILED,
+    LOGIN_USER_FAILED,
   LOGIN_USER
 } from './types';
 
 
-export const loginDetail = ({ prop, value }) => {
-  return {
+export const loginDetail = ({ prop, value }) => ({
     type: LOGIN_UPDATE,
     payload: { prop, value }
-  };
-};
+  });
 
 export const loginUser = ({ email, password }) => {
   return (dispatch) => {
