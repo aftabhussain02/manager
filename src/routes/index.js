@@ -4,6 +4,7 @@ import EmployeeList from '../component/EmployeeList';
 import LoginForm from '../component/LoginForm';
 import IconButton from '../component/IconButton';
 import EmployeeCreate from '../component/EmployeeCreate';
+import EmployeeEdit from '../component/EmployeeEdit';
 
 export const MainNavigation = createStackNavigator(
   {
@@ -26,8 +27,14 @@ export const MainNavigation = createStackNavigator(
     EmployeeForm: {
       screen: EmployeeCreate,
        navigationOptions: {
-         title: 'Employee Form',
+         title: 'Create Employee',
+       },
+     EmployeeEdit: {
+       screen: EmployeeEdit,
+       navigationOptions: {
+         title: 'Edit Employee',
        }
+     }
     }
   },
     {
